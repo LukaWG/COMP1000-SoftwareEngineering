@@ -48,7 +48,17 @@ int main()
             iss >> nextWord;
             if (!iss.fail()) {
                 //Convert a string to an integer
-                moduleNumber = stoi(nextWord);
+                try
+                {
+                    moduleNumber = stoi(nextWord);
+                }
+                catch (exception e)
+                {
+                    // If stoi fails, then this will run
+                    cerr << "stoi failed with error \"" << e.what() << "\"" << endl;
+                    return -1;
+                }
+                
                 //Write the new module code
                 cout << "COMP" << moduleNumber + 1 << endl;
                 //We are done! Break from the outer loop

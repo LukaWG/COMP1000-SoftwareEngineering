@@ -64,6 +64,34 @@ int main()
         return -1;
     }
 
+    // Find substring Area:
+    int pos2 = dataString.find("Area:");
+    if (pos2 == -1)
+    {
+        cerr << "Failed to find \"Area:\"";
+        return -1;
+    }
+
+    //Now extract the string from this point forwards
+    cout << "Found \"Area:\" at character position " << pos2 << endl;
+
+    string sub1 = dataString.substr(0, pos2);
+    string sub2 = dataString.substr(pos2);
+
+    istringstream iss2(sub2);
+    string tag;
+    string area;
+
+    iss2 >> tag >> area; // read both
+    if (iss2.fail())
+    {
+        cerr << "Could not read module area" << endl;
+        cout << "Time for coffee" << endl;
+        return -1;
+    }
+
+    cout << "Module area is: " << area << endl;
+
     // Done
     cout << "All is well!" << endl;
     return 0;
