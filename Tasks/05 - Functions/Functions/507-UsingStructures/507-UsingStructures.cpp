@@ -12,7 +12,6 @@ struct Point {
 void displayPoint(Point p);
 float calculateLength(Point p);
 Point flipPoint(Point p);
-Point addPoint(Point p1, Point p2);
 
 
 int main()
@@ -49,15 +48,6 @@ int main()
     Point p4 = flipPoint(p3);
     displayPoint(p4);               //Showing p4
 
-    cout << endl << endl << endl;
-    displayPoint(p3);
-    cout << endl;
-    displayPoint(p4);
-    cout << endl << endl;
-    Point p5 = addPoint(p3, p4);
-    displayPoint(p5);
-    cout << endl;
-    cout << calculateLength(p5);
 }
 
 
@@ -84,19 +74,5 @@ Point flipPoint(Point p)
     result.x = p.y;
     result.y = p.x;
     result.length = p.length;
-    return result;
-}
-
-Point addPoint(Point p1, Point p2)
-{
-    Point result;
-    int x = p1.x + p2.x;
-    int y = p1.y + p2.y;
-    result.x = x;
-    result.y = y;
-
-    float len = calculateLength(result);
-    result.length = len;
-
     return result;
 }
