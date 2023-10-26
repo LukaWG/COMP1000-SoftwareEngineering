@@ -1,4 +1,0 @@
-Hello COMP1000
---------------
-Subject Area: COMP
-Module ID: 1000
