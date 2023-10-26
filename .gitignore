@@ -430,7 +430,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
-# Mac files
-.DS_Store
-*.dSYM
+Tasks/06 - FileIO/01-LowLevelIO/lowlevel_io.txt
