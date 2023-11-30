@@ -24,6 +24,11 @@
     </item>
     <item>
      <widget class="QLabel" name="labelMessage">
+      <property name="font">
+       <font>
+        <kerning>true</kerning>
+       </font>
+      </property>
       <property name="text">
        <string>I have a message...</string>
       </property>
@@ -40,7 +45,7 @@
      <x>0</x>
      <y>0</y>
      <width>529</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

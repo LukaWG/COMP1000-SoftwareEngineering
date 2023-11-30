@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::pushButtonClicked);
     connect(ui->actionCopy_Result, &QAction::triggered, this, &MainWindow::copyResult);
+    connect(ui->lineEdit, &QLineEdit::returnPressed, this, &MainWindow::pushButtonClicked);
 
     //Line Edit Events
     //Connect you signals and slots here
